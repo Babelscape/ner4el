@@ -35,7 +35,7 @@ The following table reports the statistics about number of articles for each of 
 <center>
 
 | NER Class | Number of Wikipedia Articles |
-| ------------- | -------------: |
+| :------------- | -------------: |
 | Person | 1,886K|
 | Organization | 439K|
 | Location | 1,228K|
@@ -84,6 +84,7 @@ We preprocessed the datasets and converted them in the format:
 <center>
 {"mention": MENTION, "left_context": LEFT_CTX, "right_context": RIGHT_CTX"}
 </center>
+<br>
 <br>
 
 You can **DOWNLOAD** here the preprocessed datasets:
