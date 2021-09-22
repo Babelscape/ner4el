@@ -5,7 +5,7 @@ Code and resources for the paper [Named Entity Recognition for Entity Linking: W
 
 ```bibtex
 @inproceedings{tedeschi-etal-2021-ner4el,
-    title = {{Named {Entity {Recognition for {Entity {Linking: {What Works and What's Next,
+    title = {{N}amed {E}ntity {R}ecognition for {E}ntity {L}inking: {W}hat Works and What's Next,
     author = "Tedeschi, Simone and Conia, Simone and Cecconi, Francesco and Navigli, Roberto",
     booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP 2021)",
     month = nov,
