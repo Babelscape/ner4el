@@ -32,7 +32,7 @@ You can **DOWNLOAD** the resulting mapping here: [Wikipedia2NER-mapping]().
 
 The following table reports the statistics about number of articles for each of the 18 NER classes.
 
-<center>
+<div align="center">
 
 | NER Class | Number of Wikipedia Articles |
 | :------------- | -------------: |
@@ -55,7 +55,7 @@ The following table reports the statistics about number of articles for each of 
 | Time | 9K|
 | Vehichle | 78K|
 
-</center>
+</div>
 
 <br>
 
