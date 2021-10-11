@@ -28,7 +28,7 @@ For these reasons, **we introduce a new set of 18 finer-grained NER classes**, n
 
 In order to use the newly introduced NER classes, we **automatically** label each Wikipedia entity with one of them by taking advantage of [WordNet](https://wordnet.princeton.edu/) and [BabelNet](https://babelnet.org/).
 
-You can **DOWNLOAD** the resulting mapping here: [Wikipedia2NER-mapping]().
+You can **DOWNLOAD** the resulting mapping here: [Wikipedia2NER-mapping](https://drive.google.com/file/d/1tnyYe1alAPP2L866bUq4MtUh687z7oE4/view?usp=sharing) (158MB).
 
 The following table reports the statistics about number of articles for each of the 18 NER classes.
 
@@ -66,10 +66,11 @@ Here you can download other resources needed to run the code, but also useful fo
 
 | Resource | Description |
 | ------------- | :------------- |
-| [Alias Table]() | A dictionary that associates each textual mention with a set of possible candidates <br>(i.e., a set of possible Wikipedia IDs)|
-| [Descriptions Dictionary]() | A dictionary that associates each Wikipedia ID with its textual description|
-| [Counts Dictionary]() | A dictionary that associates each Wikipedia ID with its frequency in Wikipedia <br>(i.e., the sum of all the wikilinks that refer to that page)|
-| [Titles Dictionary]() | A dictionary that associates the title of a Wikipedia page with its corresponding Wikipedia ID|
+| [Alias Table](https://drive.google.com/file/d/13iro8M2KVONWANcgna_3zxxPZl9b7TVC/view?usp=sharing) (732MB) | A dictionary that associates each textual mention with a set of possible candidates <br>(i.e., a set of possible Wikipedia IDs)|
+| [Descriptions Dictionary](https://drive.google.com/file/d/1kv1yxbrqvNgONcjuu2XNaoDrs6acOs4t/view?usp=sharing) (2.7GB) | A dictionary that associates each Wikipedia ID with its textual description|
+| [Counts Dictionary](https://drive.google.com/file/d/1uKAO2866GAwVYdq1Rda6v-C2TZvoWOoZ/view?usp=sharing) (222MB) | A dictionary that associates each Wikipedia ID with its frequency in Wikipedia <br>(i.e., the sum of all the wikilinks that refer to that page)|
+| [Titles Dictionary](https://drive.google.com/file/d/1hoUfhfNTP_73mcrYoWVBrwHQ8RXP2OSY/view?usp=sharing) (178MB) | A dictionary that associates the title of a Wikipedia page with its corresponding Wikipedia ID|
+| [NER Classifier](https://drive.google.com/file/d/1hYrSfuogz0tdvhY9UA0bxgNPWUBJAsjC/view?usp=sharing) (418MB) | The pretrained NER classifier used for the NER-constrained decoding and NER-enhanced candidate generation contributions|
 
 </center>
 
@@ -87,19 +88,17 @@ We preprocessed the datasets and converted them in the format:
 <br>
 <br>
 
-You can **DOWNLOAD** here the preprocessed datasets:
-- [AIDA-YAGO-CoNLL (Train)]()
-- [AIDA-YAGO-CoNLL (Dev)]()
-- [AIDA-YAGO-CoNLL (Test)]()
-- [MSNBC]()
-- [AQUAINT]()
-- [ACE2004]()
-- [WNED-CWEB]()
-- [WNED-WIKI]()
+The preprocessed datasets are already available in this repository:
+- [AIDA-YAGO-CoNLL (Train)](./ner4el/data/aida_train.jsonl)
+- [AIDA-YAGO-CoNLL (Dev)](./ner4el/data/aida_dev.jsonl)
+- [AIDA-YAGO-CoNLL (Test)](./ner4el/data/aida_test.jsonl)
+- [MSNBC](./ner4el/data/msnbc_test.jsonl)
+- [AQUAINT](./ner4el/data/aquaint_test.jsonl)
+- [ACE2004](./ner4el/data/ace2004_test.jsonl)
+- [WNED-CWEB](./ner4el/data/cweb_test.jsonl)
+- [WNED-WIKI](./ner4el/data/wiki_test.jsonl)
 
-
-
-
+<br>
 
 # License 
 NER4EL is licensed under the CC BY-SA-NC 4.0 license. The text of the license can be found [here](https://github.com/Babelscape/wikineural/blob/master/LICENSE).
