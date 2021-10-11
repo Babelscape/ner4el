@@ -1,0 +1,18 @@
+# log frequency
+val_check_interval: 5000
+progress_bar_refresh_rate: 20
+
+wandb:
+  project: NER_for_EL
+  entity: null
+  log_model: False
+  mode: 'offline'
+  name: ${data.datamodule.version}-negativesamples=${data.datamodule.negative_samples}-nernegativesamples=${data.datamodule.ner_negative_samples}-nerrepresentation=${data.datamodule.ner_representation}-${data.datamodule.datasets.train.num_candidates}-${data.datamodule.datasets.train.window}-${model.transformer_name}-precision${train.pl_trainer.precision}-accumulation${train.pl_trainer.accumulate_grad_batches}
+
+wandb_watch:
+  log: 'all'
+  log_freq: 100
+
+lr_monitor:
+  logging_interval: "step"
+  log_momentum: False

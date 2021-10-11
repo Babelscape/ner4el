@@ -1,0 +1,25 @@
+# reproducibility
+deterministic: True
+random_seed: 2
+
+# training
+
+pl_trainer: #tutto ciò che è sotto pl_trainer viene passato al trainer di lightning
+  fast_dev_run: False # Enable this for debug purposes
+  gpus: 1
+  precision: 32
+  max_epochs: 100
+  accumulate_grad_batches: 256
+  num_sanity_val_steps: 2
+  #gradient_clip_val: 10.0
+
+monitor_metric: 'val_acc'
+monitor_metric_mode: 'max'
+
+early_stopping:
+  patience: 5
+  verbose: True
+
+model_checkpoints:
+  save_top_k: 3
+  verbose: True

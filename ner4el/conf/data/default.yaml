@@ -1,0 +1,55 @@
+datamodule:
+  _target_: src.pl_data.datamodule.MyDataModule
+  transformer_name: ${model.transformer_name}
+  alias_table_path: data/item_dict_dictionary5.pickle
+  descriptions_dict_path: data/descriptions_dict.csv
+  item_counts_dict_path: data/item_counts_dict.csv
+  title_dict_path: data/new_title_dict.pickle
+  id2ner_dict_path: data/id2ner_dict.pickle
+  version: ${model.transformer_name}
+  negative_samples: True
+  ner_negative_samples: False
+  ner_representation: False
+  ner_filter_candidates: False
+  ner_constrained_decoding: False
+  processed: False
+
+  datasets:
+    train:
+      _target_: src.pl_data.dataset.MyDataset
+      name: train
+      path: data/aida_train.jsonl
+      num_candidates: 40
+      window: 128
+      dataset_type: train
+
+    val:
+      _target_: src.pl_data.dataset.MyDataset
+      name: dev
+      path: data/aida_dev.jsonl
+      num_candidates: 40
+      window: 128
+      dataset_type: dev
+
+    test:
+      _target_: src.pl_data.dataset.MyDataset
+      name: test
+      path: data/aida_test.jsonl
+      #path: data/msnbc_test.jsonl
+      #path: data/aquaint_test.jsonl
+      #path: data/ace2004_test.jsonl
+      #path: data/cweb_test.jsonl
+      #path: data/wiki_test.jsonl
+      num_candidates: 40
+      window: 128
+      dataset_type: test
+
+  num_workers:
+    train: 8
+    val: 4
+    test: 4
+
+  batch_size:
+    train: 1
+    val: 1
+    test: 1
