@@ -60,7 +60,7 @@ class MyDataset(Dataset):
 
         if self.ner_filter_candidates:
             ner_classifier = MyNERModel()
-            ner_classifier.load_state_dict(torch.load("/mnt/data/NER_for_EL/nn-template/wandb/ner_predictor_only_aida.pt"))
+            ner_classifier.load_state_dict(torch.load("/mnt/data/NER_for_EL/nn-template/wandb/ner_classifier.pt"))
             softmax_function = nn.Softmax(dim=1)
 
             labels_vocab = {}

@@ -89,7 +89,7 @@ def run(cfg: DictConfig) -> None:
         cfg.data.datamodule, _recursive_=False
     )
 
-    model = MyModel.load_from_checkpoint(checkpoint_path=str("/mnt/data/NER_for_EL/ner4el/wandb/baseline/files/NER_for_EL/2w4d555f/checkpoints/epoch=3-step=229.ckpt"))
+    model = MyModel.load_from_checkpoint(checkpoint_path=str("/mnt/data/NER_for_EL/ner4el/wandb/baseline+representation+negative_sampling/files/NER_for_EL/1rtnaxz9/checkpoints/epoch=5-step=389.ckpt"))
     
     # Instantiate the callbacks
     callbacks: List[Callback] = build_callbacks(cfg=cfg)

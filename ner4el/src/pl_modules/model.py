@@ -20,7 +20,7 @@ from transformers import BertTokenizer, BertModel, BertConfig
 
 
 ner_model = MyNERModel().cuda()
-ner_model.load_state_dict(torch.load("/mnt/data/NER_for_EL/ner4el/wandb/ner_predictor_only_aida.pt"))
+ner_model.load_state_dict(torch.load("/mnt/data/NER_for_EL/ner4el/wandb/ner_classifier.pt"))
 
 id2ner_dict_path = "data/id2ner_dict.pickle"
 id2ner_dict_path = str(PROJECT_ROOT / id2ner_dict_path)
