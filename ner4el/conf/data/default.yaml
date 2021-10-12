@@ -8,8 +8,8 @@ datamodule:
   id2ner_dict_path: data/id2ner_dict.pickle
   version: ${model.transformer_name}
   negative_samples: False
-  ner_negative_samples: True
-  ner_representation: True
+  ner_negative_samples: False
+  ner_representation: False
   ner_filter_candidates: False
   ner_constrained_decoding: False
   processed: False

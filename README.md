@@ -81,12 +81,12 @@ The only training data that we use for our experiments are the training instance
 For **testing** we use the test split of **AIDA-YAGO-CoNLL**, and the **MSNBC**, **AQUAINT**, **ACE2004**, **WNED-CWEB** and **WNED-WIKI** test sets.
 
 We preprocessed the datasets and converted them in the format:
-<br>
 <center>
+
+```python
 {"mention": MENTION, "left_context": LEFT_CTX, "right_context": RIGHT_CTX"}
+```
 </center>
-<br>
-<br>
 
 The preprocessed datasets are already available in this repository:
 - [AIDA-YAGO-CoNLL (Train)](./ner4el/data/aida_train.jsonl)
@@ -97,6 +97,29 @@ The preprocessed datasets are already available in this repository:
 - [ACE2004](./ner4el/data/ace2004_test.jsonl)
 - [WNED-CWEB](./ner4el/data/cweb_test.jsonl)
 - [WNED-WIKI](./ner4el/data/wiki_test.jsonl)
+
+<br>
+
+# How to use
+To run the code, after you have downloaded the above listed resources and put them into the right folders as specified by the README files inside the folders, you need to do just few steps:
+1. Install the requirements:
+    ```
+    pip install -r requirements.txt
+    ```
+    The code requires **python >= 3.8**, hence we suggest you to create a conda environment with python 3.8.
+
+2. Move to the ner4el folder and run the following command to train and evaluate the system:
+    ```
+    PYTHONPATH=. python src/run.py
+    ```
+
+3. If you want to test your system, run the command:
+    ```
+    PYTHONPATH=. python src/test.py
+    ```
+
+If you want to **change the system configuration**, you need to move in the *ner4el/conf* folder and change the parameters of your interest. As an example, if you move to the [data configuration file](./ner4el/conf/data/default.yaml), you can set the *training, evaluation and test sets*, but you can also specify the *number of candidates* you want to use, as well as the *context window*. At lines 10-14, you can also choose which *NER-based contribution* you want to apply on the baseline system, by setting it to *True*.
+Similarly, in the [training configuration file](./ner4el/conf/train/default.yaml), you can specify the *number of epochs*, the *value of patience parameter*, and the number of *gradient accumulation steps*.
 
 <br>
 
