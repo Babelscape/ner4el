@@ -3,19 +3,22 @@
 
 Code and resources for the paper [Named Entity Recognition for Entity Linking: What Works and What's Next]().
 
+## Reference
+**Please cite our work if you use resources and/or code from this repository.**
+
 ```bibtex
 @inproceedings{tedeschi-etal-2021-ner4el,
-    title = {{N}amed {E}ntity {R}ecognition for {E}ntity {L}inking: {W}hat Works and What's Next,
+    title = "{N}amed {E}ntity {R}ecognition for {E}ntity {L}inking: {W}hat Works and What's Next",
     author = "Tedeschi, Simone and Conia, Simone and Cecconi, Francesco and Navigli, Roberto",
-    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (EMNLP 2021)",
+    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (Findings of EMNLP 2021)",
     month = nov,
     year = "2021",
     address = "Punta Cana, Dominican Republic"
+}
 
 ```
 
-**Please consider citing our work if you use resources and/or code from this repository.**
-
+# Named Entity Recognition for Entity Linking: An Introduction
 In this work we focus on **Entity Linking (EL)**, a key task in NLP which aims at associating an ambiguous textual mention with a named entity in a knowledge base. It is a very **knowledge-intensive task** and current EL approaches requires massive amounts of training data – often millions of labeled items – in order to perform at their best, making the development of a high-performance EL system viable only to a **limited audience**. Hence, we study whether it is possible to **narrow the performance gap** between systems trained on limited (i.e., less than 20K labeled samples) and large amounts of data (i.e., millions of training samples). In particular, we take a look at **Named Entity Recognition (NER)** – the task of identifying specific words as belonging to predefined semantic types such as Person, Location, Organization – and how this task can be exploited to **improve a strong Entity Linking baseline in low-resource settings** without requiring any additional data. We show how and to what extent an EL  system can benefit from NER to enhance its entity  representations, improve candidate selection, select more  effective negative samples and enforce hard and soft  constraints on its output entities.
 
 <br>
@@ -80,7 +83,7 @@ Here you can download other resources needed to run the code, but also useful fo
 The only training data that we use for our experiments are the training instances from the **AIDA-YAGO-CoNLL** training set. We evaluate our systems on the **validation** split of **AIDA-YAGO-CoNLL**.
 For **testing** we use the test split of **AIDA-YAGO-CoNLL**, and the **MSNBC**, **AQUAINT**, **ACE2004**, **WNED-CWEB** and **WNED-WIKI** test sets.
 
-We preprocessed the datasets and converted them in the format:
+We preprocessed the datasets and converted them in the following format:
 <center>
 
 ```python
@@ -101,7 +104,7 @@ The preprocessed datasets are already available in this repository:
 <br>
 
 # How to use
-To run the code, after you have downloaded the above listed resources and put them into the right folders as specified by the README files inside the folders, you need to do just few steps:
+To run the code, after you have downloaded the above listed resources and put them into the right folders as specified by the README files inside the folders, you need to perform the following steps:
 1. Install the requirements:
     ```
     pip install -r requirements.txt
@@ -124,4 +127,9 @@ Similarly, in the [training configuration file](./ner4el/conf/train/default.yaml
 <br>
 
 # License 
-NER4EL is licensed under the CC BY-SA-NC 4.0 license. The text of the license can be found [here](https://github.com/Babelscape/wikineural/blob/master/LICENSE). The code in this repository is built on [![](https://shields.io/badge/-nn--template-emerald?style=flat&logo=github&labelColor=gray)](https://github.com/lucmos/nn-template).
+NER4EL is licensed under the CC BY-SA-NC 4.0 license. The text of the license can be found [here](https://github.com/Babelscape/wikineural/blob/master/LICENSE).
+
+# Acknowledgments
+We gratefully acknowledge the support of the **ERC Consolidator Grant MOUSSE No. 726487** under the European Union’s Horizon2020 research and innovation programme.
+
+The code in this repository is built on top of [![](https://shields.io/badge/-nn--template-emerald?style=flat&logo=github&labelColor=gray)](https://github.com/lucmos/nn-template).
