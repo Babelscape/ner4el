@@ -31,7 +31,7 @@ For these reasons, **we introduce a new set of 18 finer-grained NER classes**, n
 
 In order to use the newly introduced NER classes, we **automatically** label each Wikipedia entity with one of them by taking advantage of [WordNet](https://wordnet.princeton.edu/) and [BabelNet](https://babelnet.org/).
 
-You can **DOWNLOAD** the resulting mapping here: [Wikipedia2NER-mapping](https://drive.google.com/file/d/1tnyYe1alAPP2L866bUq4MtUh687z7oE4/view?usp=sharing) (158MB).
+You can **download** the resulting mapping here: [Wikipedia2NER-mapping](https://drive.google.com/file/d/1tnyYe1alAPP2L866bUq4MtUh687z7oE4/view?usp=sharing) (158MB).
 
 The following table reports the statistics about number of articles for each of the 18 NER classes.
 
@@ -56,7 +56,7 @@ The following table reports the statistics about number of articles for each of 
 | Plant | 51K|
 | Supernatural | 6K|
 | Time | 9K|
-| Vehichle | 78K|
+| Vehicle | 78K|
 
 </div>
 
@@ -130,6 +130,6 @@ Similarly, in the [training configuration file](./ner4el/conf/train/default.yaml
 NER4EL is licensed under the CC BY-SA-NC 4.0 license. The text of the license can be found [here](https://github.com/Babelscape/wikineural/blob/master/LICENSE).
 
 # Acknowledgments
-We gratefully acknowledge the support of the **ERC Consolidator Grant MOUSSE No. 726487** under the European Union’s Horizon2020 research and innovation programme.
+We gratefully acknowledge the support of the **ERC Consolidator Grant MOUSSE No. 726487** under the European Union’s Horizon 2020 research and innovation programme.
 
 The code in this repository is built on top of [![](https://shields.io/badge/-nn--template-emerald?style=flat&logo=github&labelColor=gray)](https://github.com/lucmos/nn-template).
