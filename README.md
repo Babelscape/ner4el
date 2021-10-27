@@ -1,11 +1,14 @@
 ![logo](./img/logo_ner4el.png)
 --------------------------------------------------------------------------------
 
-Code and resources for the paper [Named Entity Recognition for Entity Linking: What Works and What's Next]().
+Code and resources for the paper [Named Entity Recognition for Entity Linking: What Works and What's Next](https://www.researchgate.net/publication/355667618_Named_Entity_Recognition_for_Entity_Linking_What_Works_and_What's_Next).
 
 ## Reference
 **Please cite our work if you use resources and/or code from this repository.**
+#### Plaintext
+Simone Tedeschi, Simone Conia, Francesco Cecconi and Roberto Navigli, 2021. **Named Entity Recognition for Entity Linking: What Works and What's Next**. *In Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (Findings of EMNLP 2021)*. Punta Cana, Dominican Republic. Association for Computational Linguistics.
 
+#### Bibtex
 ```bibtex
 @inproceedings{tedeschi-etal-2021-ner4el,
     title = "{N}amed {E}ntity {R}ecognition for {E}ntity {L}inking: {W}hat Works and What's Next",
