@@ -1,7 +1,7 @@
 ![logo](./img/logo_ner4el.png)
 --------------------------------------------------------------------------------
 
-Code and resources for the paper [Named Entity Recognition for Entity Linking: What Works and What's Next](https://www.researchgate.net/publication/355667618_Named_Entity_Recognition_for_Entity_Linking_What_Works_and_What's_Next).
+Code and resources for the paper [Named Entity Recognition for Entity Linking: What Works and What's Next](https://aclanthology.org/2021.findings-emnlp.220/).
 
 ## Reference
 **Please cite our work if you use resources and/or code from this repository.**
@@ -10,15 +10,21 @@ Simone Tedeschi, Simone Conia, Francesco Cecconi and Roberto Navigli, 2021. **Na
 
 #### Bibtex
 ```bibtex
-@inproceedings{tedeschi-etal-2021-ner4el,
-    title = "{N}amed {E}ntity {R}ecognition for {E}ntity {L}inking: {W}hat Works and What's Next",
-    author = "Tedeschi, Simone and Conia, Simone and Cecconi, Francesco and Navigli, Roberto",
-    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing (Findings of EMNLP 2021)",
+@inproceedings{tedeschi-etal-2021-named-entity,
+    title = "{N}amed {E}ntity {R}ecognition for {E}ntity {L}inking: {W}hat Works and What{'}s Next",
+    author = "Tedeschi, Simone  and
+      Conia, Simone  and
+      Cecconi, Francesco  and
+      Navigli, Roberto",
+    booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2021",
     month = nov,
     year = "2021",
-    address = "Punta Cana, Dominican Republic"
+    address = "Punta Cana, Dominican Republic",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.findings-emnlp.220",
+    pages = "2584--2596",
+    abstract = "Entity Linking (EL) systems have achieved impressive results on standard benchmarks mainly thanks to the contextualized representations provided by recent pretrained language models. However, such systems still require massive amounts of data {--} millions of labeled examples {--} to perform at their best, with training times that often exceed several days, especially when limited computational resources are available. In this paper, we look at how Named Entity Recognition (NER) can be exploited to narrow the gap between EL systems trained on high and low amounts of labeled data. More specifically, we show how and to what extent an EL system can benefit from NER to enhance its entity representations, improve candidate selection, select more effective negative samples and enforce hard and soft constraints on its output entities. We release our software {--} code and model checkpoints {--} at https://github.com/Babelscape/ner4el.",
 }
-
 ```
 
 # Named Entity Recognition for Entity Linking: An Introduction
