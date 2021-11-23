@@ -89,7 +89,8 @@ def run(cfg: DictConfig) -> None:
         cfg.data.datamodule, _recursive_=False
     )
 
-    model = MyModel.load_from_checkpoint(checkpoint_path=str("/mnt/data/NER_for_EL/ner4el/wandb/baseline+representation+negative_sampling/files/NER_for_EL/1rtnaxz9/checkpoints/epoch=5-step=389.ckpt"))
+    model_ckpt = input("> Insert the absolute path of your model checkpoint: ")
+    model = MyModel.load_from_checkpoint(checkpoint_path=str(model_ckpt))
     
     # Instantiate the callbacks
     callbacks: List[Callback] = build_callbacks(cfg=cfg)
@@ -113,8 +114,6 @@ def run(cfg: DictConfig) -> None:
     # Store the YaML config separately into the wandb dir
     yaml_conf: str = OmegaConf.to_yaml(cfg=cfg)
     (Path(wandb_logger.experiment.dir) / "hparams.yaml").write_text(yaml_conf)
-
-    hydra.utils.log.info(f"Instantiating the Trainer")
 
     # The Lightning core, the Trainer
     trainer = pl.Trainer(

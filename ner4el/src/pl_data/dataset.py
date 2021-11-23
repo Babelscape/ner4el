@@ -49,7 +49,6 @@ class MyDataset(Dataset):
         self.ner_negative_samples = datamodule.ner_negative_samples
         self.ner_representation = datamodule.ner_representation
         self.ner_filter_candidates = datamodule.ner_filter_candidates
-        self.ner_constrained_decoding = datamodule.ner_constrained_decoding
         self.processed = datamodule.processed
 
         self.encoded_data = []
@@ -60,7 +59,8 @@ class MyDataset(Dataset):
 
         if self.ner_filter_candidates:
             ner_classifier = MyNERModel()
-            ner_classifier.load_state_dict(torch.load("/mnt/data/NER_for_EL/nn-template/wandb/ner_classifier.pt"))
+            ner_classifier.load_state_dict(torch.load(str(PROJECT_ROOT / "wandb/ner_classifier.pt")))
+
             softmax_function = nn.Softmax(dim=1)
 
             labels_vocab = {}
@@ -72,7 +72,7 @@ class MyDataset(Dataset):
 
 
         if self.processed == True and self.dataset_type=="train":
-            with open(str(PROJECT_ROOT /  f"processed_datasets/new_aida_kilt_train_{self.num_candidates}_{self.window}_{self.transformer_name}_negativesamples={self.negative_samples}_nernegativesamples={self.ner_negative_samples}_nerrepresentation={self.ner_representation}_nerconstrained_decoding={self.ner_constrained_decoding}.pickle"), 'rb') as f:
+            with open(str(PROJECT_ROOT /  f"preprocessed_datasets/aida_kilt_train_{self.num_candidates}_{self.window}_{self.transformer_name}_negativesamples={self.negative_samples}_nernegativesamples={self.ner_negative_samples}_nerrepresentation={self.ner_representation}.pickle"), 'rb') as f:
                 self.encoded_data = pickle.load(f)
 
         else:
@@ -216,13 +216,13 @@ class MyDataset(Dataset):
 
 
                     if total_entities>0:
-                        print(f"Percentage of target entities between candidate entities: {target_between_candidates/total_entities}")
+                        print(f"Percentage of target entities within the candidate set: {target_between_candidates/total_entities}")
 
                     #print(self.encoded_data)
 
 
             if self.dataset_type == "train":
-                with open(str(PROJECT_ROOT /  f"processed_datasets/new_aida_kilt_train_{self.num_candidates}_{self.window}_{self.transformer_name}_negativesamples={self.negative_samples}_nernegativesamples={self.ner_negative_samples}_nerrepresentation={self.ner_representation}_nerconstrained_decoding={self.ner_constrained_decoding}.pickle"), 'wb') as f:
+                with open(str(PROJECT_ROOT /  f"preprocessed_datasets/aida_kilt_train_{self.num_candidates}_{self.window}_{self.transformer_name}_negativesamples={self.negative_samples}_nernegativesamples={self.ner_negative_samples}_nerrepresentation={self.ner_representation}.pickle"), 'wb') as f:
                     pickle.dump(self.encoded_data, f)
         
          

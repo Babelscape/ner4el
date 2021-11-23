@@ -18,9 +18,11 @@ from src.common.utils import PROJECT_ROOT
 
 from transformers import BertTokenizer, BertModel, BertConfig
 
+ner_constrained_decoding = input("> Do you want to use the NER-Constrained Decoding (NER-CD) strategy at inference time (it's applied only during testing)? ")
 
-ner_model = MyNERModel().cuda()
-ner_model.load_state_dict(torch.load("/mnt/data/NER_for_EL/ner4el/wandb/ner_classifier.pt"))
+if ner_constrained_decoding.lower() == "yes" or ner_constrained_decoding.lower() == "y":
+    ner_model = MyNERModel().cuda()
+    ner_model.load_state_dict(torch.load(str(PROJECT_ROOT / "wandb/ner_classifier.pt")))
 
 id2ner_dict_path = "data/id2ner_dict.pickle"
 id2ner_dict_path = str(PROJECT_ROOT / id2ner_dict_path)
@@ -118,7 +120,7 @@ class MyModel(pl.LightningModule):
 
     def step(self, batch: Any, batch_idx: int, dataset_type:str):
         
-        if not self.hparams.ner_constrained_decoding:
+        if ner_constrained_decoding.lower == ("no") or ner_constrained_decoding.lower == ("n"):
             mentions, positions, candidates, descriptions, labels = batch
             positions = torch.tensor(positions, device=self.device)
 
@@ -197,7 +199,6 @@ class MyModel(pl.LightningModule):
                     top_k_ner = torch.topk(predictions[i], 3)[1]
                     target_ner_tag_id = top_k_ner[0].item()
                     confidence = predictions[i][target_ner_tag_id].item()
-                    print(confidence)
                     target_ner_tags = []
                     for candidate in top_k_ner:
                         target_ner_tags.append(self.get_key(labels_vocab, candidate))

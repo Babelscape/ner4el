@@ -56,7 +56,6 @@ class MyDataModule(pl.LightningDataModule):
         ner_negative_samples: bool,
         ner_representation: bool,
         ner_filter_candidates: bool,
-        ner_constrained_decoding: bool,
         processed: bool,
     ):
         super().__init__()
@@ -74,7 +73,6 @@ class MyDataModule(pl.LightningDataModule):
         self.ner_negative_samples = ner_negative_samples
         self.ner_representation = ner_representation
         self.ner_filter_candidates = ner_filter_candidates
-        self.ner_constrained_decoding = ner_constrained_decoding
         self.processed = processed
 
         self.train_dataset: Optional[Dataset] = None

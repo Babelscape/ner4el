@@ -8,11 +8,11 @@ datamodule:
   id2ner_dict_path: data/id2ner_dict.pickle
   version: ${model.transformer_name}
   negative_samples: False
-  ner_negative_samples: False
-  ner_representation: False
+  ner_negative_samples: True
+  ner_representation: True
   ner_filter_candidates: False
-  ner_constrained_decoding: False
-  processed: False
+  #ner_constrained_decoding -> can be specified once the script is started 
+  processed: True
 
   datasets:
     train:
@@ -31,18 +31,55 @@ datamodule:
       window: 128
       dataset_type: dev
 
+    #UNCOMMENT THE BLOCK CORRESPONDING TEST SET THAT YOU WANT TO USE (Ctrl + Shift + 7)
+
     test:
       _target_: src.pl_data.dataset.MyDataset
       name: test
       path: data/aida_test.jsonl
-      #path: data/msnbc_test.jsonl
-      #path: data/aquaint_test.jsonl
-      #path: data/ace2004_test.jsonl
-      #path: data/cweb_test.jsonl
-      #path: data/wiki_test.jsonl
       num_candidates: 40
       window: 128
       dataset_type: test
+
+    # test:
+    #   _target_: src.pl_data.dataset.MyDataset
+    #   name: test
+    #   path: data/msnbc_test.jsonl
+    #   num_candidates: 40
+    #   window: 128
+    #   dataset_type: test
+
+    # test:
+    #   _target_: src.pl_data.dataset.MyDataset
+    #   name: test
+    #   path: data/aquaint_test.jsonl
+    #   num_candidates: 5
+    #   window: 128
+    #   dataset_type: test
+
+    # test:
+    #   _target_: src.pl_data.dataset.MyDataset
+    #   name: test
+    #   path: data/ace2004_test.jsonl
+    #   num_candidates: 40
+    #   window: 128
+    #   dataset_type: test
+
+    # test:
+    #   _target_: src.pl_data.dataset.MyDataset
+    #   name: test
+    #   path: data/cweb_test.jsonl
+    #   num_candidates: 40
+    #   window: 128
+    #   dataset_type: test
+
+    # test:
+    #   _target_: src.pl_data.dataset.MyDataset
+    #   name: test
+    #   path: data/wiki_test.jsonl
+    #   num_candidates: 40
+    #   window: 128
+    #   dataset_type: test
 
   num_workers:
     train: 8

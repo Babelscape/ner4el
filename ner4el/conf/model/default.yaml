@@ -2,4 +2,3 @@ _target_: src.pl_modules.model.MyModel
 
 transformer_name: bert-large-uncased
 dropout: 0.5
-ner_constrained_decoding: ${data.datamodule.ner_constrained_decoding}

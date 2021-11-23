@@ -5,6 +5,7 @@ pytorch-lightning==1.2.5
 hydra-core==1.1.0.dev5
 wandb==0.10.23
 streamlit==0.79.0
+transformers==4.6.0
 # hydra-joblib-launcher
 
 # Stable stuff usually backward compatible
@@ -12,3 +13,4 @@ dvc
 python-dotenv
 matplotlib
 stqdm
+sklearn
