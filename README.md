@@ -114,6 +114,9 @@ The preprocessed datasets are already available in this repository:
 
 # How to use
 To run the code, after you have downloaded the above listed resources and put them into the right folders as specified by the README files inside the folders, you need to perform the following steps:
+
+0. Set the PROJECT_ROOT variable in the [.env](.env) file (it should correspond to the absolute path of the ner4el/ner4el folder)
+
 1. Install the requirements:
     ```
     pip install -r requirements.txt

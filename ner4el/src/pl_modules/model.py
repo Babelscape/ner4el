@@ -120,7 +120,7 @@ class MyModel(pl.LightningModule):
 
     def step(self, batch: Any, batch_idx: int, dataset_type:str):
         
-        if ner_constrained_decoding.lower == ("no") or ner_constrained_decoding.lower == ("n"):
+        if ner_constrained_decoding.lower() == ("no") or ner_constrained_decoding.lower() == ("n"):
             mentions, positions, candidates, descriptions, labels = batch
             positions = torch.tensor(positions, device=self.device)
 
