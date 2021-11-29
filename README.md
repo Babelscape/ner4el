@@ -1,3 +1,10 @@
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/named-entity-recognition-for-entity-linking/entity-disambiguation-on-ace2004)](https://paperswithcode.com/sota/entity-disambiguation-on-ace2004?p=named-entity-recognition-for-entity-linking)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/named-entity-recognition-for-entity-linking/entity-disambiguation-on-aquaint)](https://paperswithcode.com/sota/entity-disambiguation-on-aquaint?p=named-entity-recognition-for-entity-linking)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/named-entity-recognition-for-entity-linking/entity-disambiguation-on-msnbc)](https://paperswithcode.com/sota/entity-disambiguation-on-msnbc?p=named-entity-recognition-for-entity-linking)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/named-entity-recognition-for-entity-linking/entity-disambiguation-on-wned-cweb)](https://paperswithcode.com/sota/entity-disambiguation-on-wned-cweb?p=named-entity-recognition-for-entity-linking)	
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/named-entity-recognition-for-entity-linking/entity-disambiguation-on-wned-wiki)](https://paperswithcode.com/sota/entity-disambiguation-on-wned-wiki?p=named-entity-recognition-for-entity-linking)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/named-entity-recognition-for-entity-linking/entity-disambiguation-on-aida-conll)](https://paperswithcode.com/sota/entity-disambiguation-on-aida-conll?p=named-entity-recognition-for-entity-linking)
+
 ![logo](./img/logo_ner4el.png)
 --------------------------------------------------------------------------------
 
