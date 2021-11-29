@@ -89,7 +89,7 @@ Here you can download other resources needed to run the code, but also useful fo
 | [Descriptions Dictionary](https://drive.google.com/file/d/1kv1yxbrqvNgONcjuu2XNaoDrs6acOs4t/view?usp=sharing) (2.7GB) | A dictionary that associates each Wikipedia ID with its textual description|
 | [Counts Dictionary](https://drive.google.com/file/d/1uKAO2866GAwVYdq1Rda6v-C2TZvoWOoZ/view?usp=sharing) (222MB) | A dictionary that associates each Wikipedia ID with its frequency in Wikipedia <br>(i.e., the sum of all the wikilinks that refer to that page)|
 | [Titles Dictionary](https://drive.google.com/file/d/1hoUfhfNTP_73mcrYoWVBrwHQ8RXP2OSY/view?usp=sharing) (178MB) | A dictionary that associates the title of a Wikipedia page with its corresponding Wikipedia ID|
-| [NER Classifier](https://drive.google.com/file/d/1hYrSfuogz0tdvhY9UA0bxgNPWUBJAsjC/view?usp=sharing) (418MB) | The pretrained NER classifier used for the NER-constrained decoding and NER-enhanced candidate generation contributions|
+| [NER Classifier](https://drive.google.com/file/d/1SNXL_UvJ1RWzQaFOKZusfimIMgFQ5LAy/view?usp=sharing) (418MB) | The pretrained NER classifier used for the NER-constrained decoding and NER-enhanced candidate generation contributions|
 
 </center>
 
@@ -119,7 +119,23 @@ The preprocessed datasets are already available in this repository:
 
 <br>
 
-# How to use
+# Pretrained Model
+We release the model checkpoint of the best NER4EL system [here](https://drive.google.com/file/d/1CbjbknVYiON11xV1rOZto5mumbPov0z4/view?usp=sharing) (4.0GB).
+
+**Note**: We re-implemented the code using the [nn-template](https://github.com/lucmos/nn-template) and trained the system on a different hardware architecture. Although the obtained results are, on average, almost identical to those reported in the paper, they are slightly different. Please, find below the performance of the released system:
+
+<center>
+
+| System | AIDA | MSNBC | AQUAINT | ACE2004 | CWEB | WIKI | Avg. |
+| ------------- | -------------: | -------------: | -------------: |  -------------: | -------------: | -------------: | -------------: |
+| Paper (Baseline + NER-R + NER-NS + NER-CD) | 92.5 | 89.2 | 69.5 | 91.3 | 68.5 | 64.0 | 79.16 |
+| Released system (Baseline + NER-R + NER-NS + NER-CD) | 93.6 | 89.1 | 70.6 | 91.0 | 67.2 | 63.7 | 79.20 |
+</center>
+
+
+<br>
+
+# How To Use
 To run the code, after you have downloaded the above listed resources and put them into the right folders as specified by the README files inside the folders, you need to perform the following steps:
 
 0. Set the PROJECT_ROOT variable in the [.env](.env) file (it should correspond to the absolute path of the ner4el/ner4el folder)
@@ -135,18 +151,21 @@ To run the code, after you have downloaded the above listed resources and put th
     PYTHONPATH=. python src/run.py
     ```
 
-3. If you want to test your system, run the command:
+3. If you want to test a trained system (e.g., the **NER4EL pretrained model** available in the previous section), run the command:
     ```
     PYTHONPATH=. python src/test.py
     ```
+    Once the script is started, it asks you to specify the path of your model checkpoint.
 
-If you want to **change the system configuration**, you need to move in the *ner4el/conf* folder and change the parameters of your interest. As an example, if you move to the [data configuration file](./ner4el/conf/data/default.yaml), you can set the *training, evaluation and test sets*, but you can also specify the *number of candidates* you want to use, as well as the *context window*. At lines 10-14, you can also choose which *NER-based contribution* you want to apply on the baseline system, by setting it to *True*.
+**Note**:If you want to **change the system configuration**, you need to move in the *ner4el/conf* folder and change the parameters of your interest. As an example, if you move to the [data configuration file](./ner4el/conf/data/default.yaml), you can set the *training, evaluation and test sets*, but you can also specify the *number of candidates* you want to use, as well as the *context window*. At lines 10-14, you can also choose which *NER-based contribution* you want to apply on the baseline system, by setting it to *True*.
 Similarly, in the [training configuration file](./ner4el/conf/train/default.yaml), you can specify the *number of epochs*, the *value of patience parameter*, and the number of *gradient accumulation steps*.
 
 <br>
 
 # License 
 NER4EL is licensed under the CC BY-SA-NC 4.0 license. The text of the license can be found [here](https://github.com/Babelscape/wikineural/blob/master/LICENSE).
+
+<br>
 
 # Acknowledgments
 We gratefully acknowledge the support of the **ERC Consolidator Grant MOUSSE No. 726487** under the European Union’s Horizon 2020 research and innovation programme.
