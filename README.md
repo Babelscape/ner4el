@@ -89,7 +89,7 @@ Here you can download other resources needed to run the code, but also useful fo
 | [Descriptions Dictionary](https://drive.google.com/file/d/1kv1yxbrqvNgONcjuu2XNaoDrs6acOs4t/view?usp=sharing) (2.7GB) | A dictionary that associates each Wikipedia ID with its textual description|
 | [Counts Dictionary](https://drive.google.com/file/d/1uKAO2866GAwVYdq1Rda6v-C2TZvoWOoZ/view?usp=sharing) (222MB) | A dictionary that associates each Wikipedia ID with its frequency in Wikipedia <br>(i.e., the sum of all the wikilinks that refer to that page)|
 | [Titles Dictionary](https://drive.google.com/file/d/1hoUfhfNTP_73mcrYoWVBrwHQ8RXP2OSY/view?usp=sharing) (178MB) | A dictionary that associates the title of a Wikipedia page with its corresponding Wikipedia ID|
-| [NER Classifier](https://drive.google.com/file/d/1SNXL_UvJ1RWzQaFOKZusfimIMgFQ5LAy/view?usp=sharing) (418MB) | The pretrained NER classifier used for the NER-constrained decoding and NER-enhanced candidate generation contributions|
+| [NER Classifier](https://drive.google.com/file/d/1SNXL_UvJ1RWzQaFOKZusfimIMgFQ5LAy/view?usp=sharing) (418MB) | The pretrained NER classifier used for the NER-constrained decoding and NER-enhanced candidate generation contributions (place it into the ner4el/wandb folder)|
 
 </center>
 
