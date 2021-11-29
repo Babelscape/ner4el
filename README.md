@@ -157,7 +157,7 @@ To run the code, after you have downloaded the above listed resources and put th
     ```
     Once the script is started, it asks you to specify the path of your model checkpoint.
 
-**Note**:If you want to **change the system configuration**, you need to move in the *ner4el/conf* folder and change the parameters of your interest. As an example, if you move to the [data configuration file](./ner4el/conf/data/default.yaml), you can set the *training, evaluation and test sets*, but you can also specify the *number of candidates* you want to use, as well as the *context window*. At lines 10-14, you can also choose which *NER-based contribution* you want to apply on the baseline system, by setting it to *True*.
+**Note**: If you want to **change the system configuration**, you need to move in the *ner4el/conf* folder and change the parameters of your interest. As an example, if you move to the [data configuration file](./ner4el/conf/data/default.yaml), you can set the *training, evaluation and test sets*, but you can also specify the *number of candidates* you want to use, as well as the *context window*. At lines 10-14, you can also choose which *NER-based contribution* you want to apply on the baseline system, by setting it to *True*.
 Similarly, in the [training configuration file](./ner4el/conf/train/default.yaml), you can specify the *number of epochs*, the *value of patience parameter*, and the number of *gradient accumulation steps*.
 
 <br>
