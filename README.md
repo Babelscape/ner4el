@@ -103,7 +103,7 @@ We preprocessed the datasets and converted them in the following format:
 <center>
 
 ```python
-{"mention": MENTION, "left_context": LEFT_CTX, "right_context": RIGHT_CTX"}
+{"mention": MENTION, "left_context": LEFT_CTX, "right_context": RIGHT_CTX, "output": OUTPUT}
 ```
 </center>
 
