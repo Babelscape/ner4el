@@ -10,6 +10,8 @@
 
 Code and resources for the paper [Named Entity Recognition for Entity Linking: What Works and What's Next](https://aclanthology.org/2021.findings-emnlp.220/).
 
+This repository is mainly built upon [Pytorch](https://pytorch.org/) and [Pytorch-Lightning](https://pytorch-lightning.readthedocs.io/en/latest/).
+
 ## Reference
 **Please cite our work if you use resources and/or code from this repository.**
 #### Plaintext
