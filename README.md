@@ -39,6 +39,13 @@ Simone Tedeschi, Simone Conia, Francesco Cecconi and Roberto Navigli, 2021. **Na
 # Named Entity Recognition for Entity Linking: An Introduction
 In this work we focus on **Entity Linking (EL)**, a key task in NLP which aims at associating an ambiguous textual mention with a named entity in a knowledge base. It is a very **knowledge-intensive task** and current EL approaches requires massive amounts of training data – often millions of labeled items – in order to perform at their best, making the development of a high-performance EL system viable only to a **limited audience**. Hence, we study whether it is possible to **narrow the performance gap** between systems trained on limited (i.e., less than 20K labeled samples) and large amounts of data (i.e., millions of training samples). In particular, we take a look at **Named Entity Recognition (NER)** – the task of identifying specific words as belonging to predefined semantic types such as Person, Location, Organization – and how this task can be exploited to **improve a strong Entity Linking baseline in low-resource settings** without requiring any additional data. We show how and to what extent an EL  system can benefit from NER to enhance its entity  representations, improve candidate selection, select more  effective negative samples and enforce hard and soft  constraints on its output entities.
 
+<div align="center">
+
+![contributions](./img/contributions.png)
+
+</div>
+
+
 <br>
 
 # Fine-Grained Classes for NER
@@ -51,30 +58,11 @@ In order to use the newly introduced NER classes, we **automatically** label eac
 
 You can **download** the resulting mapping here: [Wikipedia2NER-mapping](https://drive.google.com/file/d/1tnyYe1alAPP2L866bUq4MtUh687z7oE4/view?usp=sharing) (158MB).
 
-The following table reports the statistics about number of articles for each of the 18 NER classes.
+The following table plot shows the percentage of Wikipedia articles for each of the 18 NER classes.
 
 <div align="center">
 
-| NER Class | Number of Wikipedia Articles |
-| :------------- | -------------: |
-| Person | 1,886K|
-| Organization | 439K|
-| Location | 1,228K|
-| Animal | 330K|
-| Biology | 16K|
-| Celestial Body | 13K|
-| Disease | 9K|
-| Event | 249K|
-| Food | 15K|
-| Instrument | 52K|
-| Media | 703K|
-| Monetary | 2K|
-| Number | 1K|
-| Physical Phenomenon | 2K|
-| Plant | 51K|
-| Supernatural | 6K|
-| Time | 9K|
-| Vehicle | 78K|
+![percentages](./img/percentages.png)
 
 </div>
 
