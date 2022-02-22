@@ -112,7 +112,9 @@ The preprocessed datasets are already available in this repository:
 <br>
 
 # Pretrained Model
-We release the model checkpoint of the best NER4EL system [here](https://drive.google.com/file/d/1CbjbknVYiON11xV1rOZto5mumbPov0z4/view?usp=sharing) (4.0GB). We underline that we trained our system only on the 18K training instances provided by the **AIDA-YAGO-CoNLL** training set. If you want to obtain a stronger EL system using our architecture you can pretrain it on BLINK (9M training instances from Wikipedia). You can download the BLINK train and validation splits as follows:
+We release the model checkpoint of the best NER4EL system [here](https://drive.google.com/file/d/1CbjbknVYiON11xV1rOZto5mumbPov0z4/view?usp=sharing) (4.0GB).
+
+We underline that we trained our system only on the 18K training instances provided by the **AIDA-YAGO-CoNLL** training set. If you want to obtain a stronger EL system using our architecture you can pretrain it on BLINK (9M training instances from Wikipedia). You can download the BLINK train and validation splits as follows:
 ```python
 wget http://dl.fbaipublicfiles.com/KILT/blink-train-kilt.jsonl
 wget http://dl.fbaipublicfiles.com/KILT/blink-dev-kilt.jsonl
