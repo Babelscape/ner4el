@@ -58,7 +58,7 @@ In order to use the newly introduced NER classes, we **automatically** label eac
 
 You can **download** the resulting mapping here: [Wikipedia2NER-mapping](https://drive.google.com/file/d/1tnyYe1alAPP2L866bUq4MtUh687z7oE4/view?usp=sharing) (158MB).
 
-The following table plot shows the percentage of Wikipedia articles for each of the 18 NER classes.
+The following plot shows the percentage of Wikipedia articles for each of the 18 NER classes.
 
 <div align="center">
 
