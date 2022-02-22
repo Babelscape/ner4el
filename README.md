@@ -66,7 +66,7 @@ The following plot shows the percentage of Wikipedia articles for each of the 18
 
 </div>
 
-Further details about these classes such as the exact number of articles for each class, or the full strategy used to obtain these annotation, are provided in the paper.
+Further details about these classes such as the exact number of articles for each class, or the full strategy used to obtain these annotations, are provided in the paper.
 
 <br>
 
