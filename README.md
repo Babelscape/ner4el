@@ -64,9 +64,9 @@ The following table plot shows the percentage of Wikipedia articles for each of 
 
 ![percentages](./img/percentages.png)
 
-Further details about these classes such as the exact number of articles for each class, or the full strategy used to obtain these annotation, are provided in the paper.
-
 </div>
+
+Further details about these classes such as the exact number of articles for each class, or the full strategy used to obtain these annotation, are provided in the paper.
 
 <br>
 
